@@ -8,9 +8,15 @@ export default function Heading():any{
 
 // component 1b
 
-export function Heading1b(prop:any):any{
+interface prop {
+  name:string
+  cast:string
+  Stdno:string
+}
+
+export function Heading1b(prop:prop): JSX.Element{
   console.log(prop)
   return(
-    <div> <h1>{`Name ${prop.name} Cast ${prop.cast} Student No ${prop.Stdno}`} <b>Heading.tsx</b> </h1></div>
+    <div> <h1>{`Name ${prop.name} Cast ${prop.cast} Student No ${prop.Stdno}`} From Component 1b <b>Heading.tsx</b> </h1></div>
   )
 }
